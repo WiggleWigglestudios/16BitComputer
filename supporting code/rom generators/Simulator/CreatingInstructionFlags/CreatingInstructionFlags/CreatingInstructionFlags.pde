@@ -7,76 +7,71 @@ long currentInstructionValue=0;
 
 String[] labels=
 {
-  "r0toA",
-  "r1toA",
-  "r2toA",
-  "r3toA",
-  "r4toA",
-  "r5toA",
-  "r6toA",
-  "r7toA",
+  "RNtoA",
   "PCtoA",
-  "SPtoA",
-  "STATtoA",
-  "IRtoA",
-  "MARtoA",
-  "r13toA",
-  "r14toA",
-  "IMRtoA",
-  
-  "r0toB",
-  "r1toB",
-  "r2toB",
-  "r3toB",
-  "r4toB",
-  "r5toB",
-  "r6toB",
-  "r7toB",
-  "PCtoB",
-  "SPtoB",
-  "STATtoB",
-  "IRtoB",
-  "MARtoB",
-  "r13toB",
-  "r14toB",
-  "IMRtoB",
-  
-  "Ctor0",
-  "Ctor1",
-  "Ctor2",
-  "Ctor3",
-  "Ctor4",
-  "Ctor5",
-  "Ctor6",
-  "Ctor7",
+  "RNtoB",
+  "IMRroB",
+  "CtoRN",
   "CtoPC",
-  "CtoSP",
-  "CtoSTAT",
   "CtoIR",
   "CtoMAR",
-  "Ctor13",
-  "Ctor14",
-  
-  
+  "CtoIMR",
   "AtoC",
   "BtoC",
   "ALUtoC",
-  
   "AtoD",
   "BtoD",
   "DtoC",
-  
   "incPC",
   "incSP",
   "decSP",
   "PCtoAddress",
   "MARtoAddress",
   "SPtoAddress",
-  "ALUtoStat",
-  "CtoPCC", //C to program counter conditional, only if condition is met
-  "resetSTAT", //resets status register to before interupts
+  "ALUtoSTAT",
+  "CtoPCC",
+  "resetSTAT",
+  "END",
   "none",
-  "end"  
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
+  "none",
 
 };
 
@@ -85,7 +80,19 @@ String[] instructionNames=new String[256];
 
 void getInstructionNames()
 {
-  instructionNames=loadStrings("InstructionNames.csv");
+  
+  String[] inputNames=loadStrings("InstructionNames.csv");
+  for(int i=0;i<256;i++)
+  {
+    if(i<inputNames.length)
+    {
+      instructionNames[i]=inputNames[i];
+    }else
+    {
+      instructionNames[i]="";
+    }
+    
+  }
 }
 
 void writeInstructionFlags()
@@ -138,7 +145,7 @@ void updateCurrentInstruction()
 
 
 void setup() {
-  size(64*2*10, 20+100+10);
+  size(64*2*10, 20+200+10);
   loadInstructionFlags();
   updateCurrentInstruction();
   getInstructionNames();
@@ -147,7 +154,7 @@ void setup() {
 void draw() {    
   background(255,255,255);
   strokeWeight(2);
-  stroke(0,0,0);
+  stroke(255,255,255);
   textSize(15);
   for(int i=0;i<64;i++)
   {
@@ -165,7 +172,7 @@ void draw() {
     }
     
     fill(currentColor,currentColor,currentColor);
-    rect(i*20,0,20,20);
+    rect(i*20,-5,20,25);
     
     fill(0,0,0);
     pushMatrix();
@@ -179,13 +186,13 @@ void draw() {
   
   textSize(20);
   fill(0,0,0);
-  text("Instruction: "+instructionNames[instructionOn],10,95);
-  text(instructionOn+", "+subInstructionOn,10,115);
+  text("Instruction: "+instructionNames[instructionOn],10,195);
+  text(instructionOn+", "+subInstructionOn,10,215);
   
-  text("sub:",400,95);
-  text("instruction:",340,115);
+  text("sub:",400,195);
+  text("instruction:",340,215);
   fill(3, 119, 252);
-  stroke(0,0,0);
+  stroke(255,255,255);
   for(int i=0;i<3;i++)
   {
     float currentColor=0;
@@ -195,13 +202,13 @@ void draw() {
       currentColor=1;
     }
     
-    if(mouseX>i*20+450&&mouseX<i*20+20+450&&mouseY>75&&mouseY<95)
+    if(mouseX>i*20+450&&mouseX<i*20+20+450&&mouseY>175&&mouseY<195)
     {
       currentColor=(0.75+currentColor)/2;
     }
     
     fill(3*currentColor, 119*currentColor, 252*currentColor);
-    rect(450+i*20,75,20,20);
+    rect(450+i*20,175,20,20);
   } 
   for(int i=0;i<8;i++)
   {
@@ -212,15 +219,32 @@ void draw() {
       currentColor=1;
     }
     
-    if(mouseX>i*20+450&&mouseX<i*20+20+450&&mouseY>100&&mouseY<120)
+    if(mouseX>i*20+450&&mouseX<i*20+20+450&&mouseY>200&&mouseY<220)
     {
       currentColor=(0.75+currentColor)/2;
     }
     fill(3*currentColor, 119*currentColor, 252*currentColor);
-    rect(450+i*20,100,20,20);
+    rect(450+i*20,200,20,20);
   }
   
-
+    
+  fill(0, 255, 179);
+  if(mouseX>10&&mouseX<96&&mouseY>128&&mouseY<158)
+  {
+     fill(127,255,220);
+  }
+  rect(10,128,86,30,2);
+  fill(0,0,0);
+  text("Set Fetch",15,150);
+    
+  fill(0, 255, 179);
+  if(mouseX>100&&mouseX<210&&mouseY>128&&mouseY<158)
+  {
+     fill(127,255,220);
+  }
+  rect(100,128,110,30,2);
+  fill(0,0,0);
+  text("Set All Fetch",105,150);
 }
 
 void mousePressed()
@@ -229,16 +253,28 @@ void mousePressed()
   {
     currentInstructionValue=currentInstructionValue^(1L<<((long)(mouseX/20)));
   }
-  if(mouseX>450&&mouseX<510&&mouseY>75&&mouseY<95)
+  if(mouseX>450&&mouseX<510&&mouseY>175&&mouseY<195)
   {
     subInstructionOn=subInstructionOn^(1<<(2-(mouseX-450)/20));
     updateCurrentInstruction();
   }
   
-  if(mouseX>450&&mouseX<610&&mouseY>100&&mouseY<120)
+  if(mouseX>450&&mouseX<610&&mouseY>200&&mouseY<220)
   {
     instructionOn=instructionOn^(1<<(7-(mouseX-450)/20));
     updateCurrentInstruction();
+  }
+  if(mouseX>10&&mouseX<96&&mouseY>128&&mouseY<158)
+  {
+     currentInstructionValue=0b1000100000001000000;
+  }
+  if(mouseX>100&&mouseX<210&&mouseY>128&&mouseY<158)
+  {
+     for(int i=0;i<256;i++)
+     {
+       instructionFlags[i][0]=0b1000100000001000000;
+     }  
+     updateCurrentInstruction();
   }
   
 }
