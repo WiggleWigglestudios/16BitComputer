@@ -1,0 +1,143 @@
+add,add rn1 rn2
+add,add rn1 #5
+add,add rn1 5
+add,add rn1 [rn2]
+adc,adc rn1 rn2
+adc,adc rn1 #5
+adc,adc rn1 5
+adc,adc rn1 [rn2]
+sub,sub rn1 rn2
+sub,sub rn1 #5
+sub,sub rn1 5
+sub,sub rn1 [rn2]
+sbc,sbc rn1 rn2
+sbc,sbc rn1 #5
+sbc,sbc  rn1 5
+sbc,sbc rn1 [rn2]
+and,and rn1 rn2
+and,and rn1 #5
+and,and rn1 10
+and,and rn1 [rn2]
+or,or rn1 rn2
+or,or rn1 #5
+or,or rn1 10
+or,or rn1 [rn2]
+nand,nand rn1 rn2
+nand,nand rn1 #5
+nand,nand rn1 10
+nand,nand rn1 [rn2]
+nor,nor rn1 rn2
+nor,nor rn1 #5
+nor,nor rn1 10
+nor,nor rn1 [rn2]
+xor,xor rn1 rn2
+xor,xor rn1 #5
+xor,xor rn1 10
+xor,xor rn1 [rn2]
+xnor,xnor rn1 rn2
+xnor,xnor rn1 #5
+xnor,xnor rn1 10
+xnor,xnor nr1 [rn2]
+cmp,cmp rn1 rn2
+cmp,cmp rn1 #5
+cmp,cmp rn1 7
+cmp,cmp rn1 [rn2]
+shr,shr rn1 #5
+shr,shr rn1 rn2
+ror,ror rn1 #5
+ror,ror rn1 rn2
+shl,shl rn1 #5
+shl,shl rn1 rn2
+rol,rol rn1 #5
+rol,rol rn1 rn2
+,
+,
+,
+,
+mult,mult rn1 rn2
+mult,mult rn1 #5
+mult,mult rn1 5
+mult,mult rn1 [rn2]
+smult,smult rn1 rn2
+smult,smult rn1 #5
+smult,smult rn1 5
+smult,smult rn1 [rn2]
+load,load rn #10
+load,load rn 7
+load,load rn1 [rn2]
+mov,mov rn1 rn2
+str,str rn 7
+str,str rn1 [rn2]
+str,str #10 7
+str,str #10 [rn2]
+push,push rn
+pop,pop rn
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+jmp,jmp #5
+jmp,jmp rn
+jsr,jsr #5
+jsr,jsr rn
+bra,bra #5
+brz,brz #5
+brnz,brnz #5
+brn,brn #5
+brp,brp #5
+brzn,brzn #5
+brzp,brzp #5
+brc,brc #5
+brnc,brnc #5
+ret,ret
+rti,rti
