@@ -131,7 +131,7 @@ void loadInstructionFlags()
       {
         for(int d=0;d<8;d++)
         {
-          instructionFlags[i][c]=(instructionFlags[i][c]<<8)|((long)data[i*8*8+c*8+7-d]);
+          instructionFlags[i][c]=(instructionFlags[i][c]<<8)|(data[i*8*8+c*8+7-d]&0xFF);
         }
       }
     }
@@ -273,7 +273,7 @@ void mousePressed()
      for(int i=0;i<256;i++)
      {
        instructionFlags[i][0]=0b1000100000001000000;
-     }  
+     }
      updateCurrentInstruction();
   }
   
