@@ -32,8 +32,7 @@ String[] labels=
   "CtoPCC",
   "resetSTAT",
   "END",
-  "none",
-  "none",
+  "PCtoA",
   "none",
   "none",
   "none",
@@ -236,6 +235,10 @@ void draw() {
   rect(10,128,86,30,2);
   fill(0,0,0);
   text("Set Fetch",15,150);
+  
+  
+  
+  
     
   fill(0, 255, 179);
   if(mouseX>100&&mouseX<210&&mouseY>128&&mouseY<158)
@@ -245,29 +248,59 @@ void draw() {
   rect(100,128,110,30,2);
   fill(0,0,0);
   text("Set All Fetch",105,150);
+  
+  
+  
+  
+  fill(0, 255, 179);
+  if(mouseX>10&&mouseX<96&&mouseY>95&&mouseY<125)
+  {
+     fill(127,255,220);
+  }
+  rect(10,95,86,30,2);
+  fill(0,0,0);
+  text("Clear",15,118);
+  
+  
+    
+  fill(0, 255, 179);
+  if(mouseX>100&&mouseX<210&&mouseY>95&&mouseY<125)
+  {
+     fill(127,255,220);
+  }
+  rect(100,95,110,30,2);
+  fill(0,0,0);
+  text("Repeat",105,118);
 }
 
 void mousePressed()
 {
+  //instruction flag buttons
   if(mouseY<20)
   {
     currentInstructionValue=currentInstructionValue^(1L<<((long)(mouseX/20)));
   }
+  //sub instruction select
   if(mouseX>450&&mouseX<510&&mouseY>175&&mouseY<195)
   {
     subInstructionOn=subInstructionOn^(1<<(2-(mouseX-450)/20));
     updateCurrentInstruction();
   }
   
+  //instruction select
   if(mouseX>450&&mouseX<610&&mouseY>200&&mouseY<220)
   {
     instructionOn=instructionOn^(1<<(7-(mouseX-450)/20));
     updateCurrentInstruction();
   }
+  
+  //set fetch
   if(mouseX>10&&mouseX<96&&mouseY>128&&mouseY<158)
   {
      currentInstructionValue=0b1000100000001000000;
   }
+  
+  //set all fetch
   if(mouseX>100&&mouseX<210&&mouseY>128&&mouseY<158)
   {
      for(int i=0;i<256;i++)
@@ -275,6 +308,25 @@ void mousePressed()
        instructionFlags[i][0]=0b1000100000001000000;
      }
      updateCurrentInstruction();
+  }
+  
+  //clear
+  if(mouseX>10&&mouseX<96&&mouseY>95&&mouseY<125)
+  {
+    currentInstructionValue=0;
+  }
+  
+    
+  //repeat
+  if(mouseX>100&&mouseX<210&&mouseY>95&&mouseY<125)
+  {
+    for(int i=instructionOn+4;i<256;i+=4)
+    {
+      for(int c=0;c<8;c++)
+      {
+        instructionFlags[i][c]=instructionFlags[instructionOn][c];
+      }
+    }
   }
   
 }
