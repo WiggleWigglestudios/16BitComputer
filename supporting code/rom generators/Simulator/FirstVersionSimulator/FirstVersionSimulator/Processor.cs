@@ -33,7 +33,7 @@ public class Processor
     ushort cBus = 0;
     ushort data = 0;
     ushort address = 0;
-    byte subInstructionCounter=0;
+    public byte subInstructionCounter=0;
     UInt64[,] flags;
     string[] instructionNames = new string[256];
     ushort interuptStat = 0;
@@ -155,7 +155,7 @@ public class Processor
         int rnB= (registers[11] & 0b11100000000000)>>11;
         if (subInstructionCounter == 1)
         {
-            Console.WriteLine(instructionNames[currentInstruction]);
+           // Console.WriteLine(instructionNames[currentInstruction]);
         }
         //bool reading = false;
         //rna to a
@@ -167,7 +167,7 @@ public class Processor
         //imr to b
         if ((flags[currentInstruction, subInstructionCounter] & (1 << 3)) != 0) { bBus = registers[15]; }//Console.Write("imr to b "); }
         //c to rna
-        if ((flags[currentInstruction, subInstructionCounter] & (1 << 4)) != 0) {/*does stuff in falling*/ }//Console.Write("c to rna "); }
+        if ((flags[currentInstruction, subInstructionCounter] & (1 << 4)) != 0) {/*does stuff in falling*/}// Console.Write("c to rna "); }
         //c to pc
         if ((flags[currentInstruction, subInstructionCounter] & (1 << 5)) != 0) { /*does stuff in falling*/}//Console.Write("c to pc "); }
         //c to ir
@@ -223,7 +223,7 @@ public class Processor
         //a to c
         if ((flags[currentInstruction, subInstructionCounter] & (1 << 9)) != 0) { cBus = aBus; }//Console.Write("a to c "); }
         //b to c
-        if ((flags[currentInstruction, subInstructionCounter] & (1 << 10)) != 0) { cBus = bBus; }//Console.Write("b to c "); }
+        if ((flags[currentInstruction, subInstructionCounter] & (1 << 10)) != 0) { cBus = bBus; }// Console.Write("b to c "); }
         //d to c
         if ((flags[currentInstruction, subInstructionCounter] & (1 << 14)) != 0) { data=ram[address]; }//Console.Write("d to c "); }
 
@@ -241,7 +241,7 @@ public class Processor
         //a to c
         if ((flags[currentInstruction, subInstructionCounter] & (1 << 9)) != 0) { cBus = aBus; }
         //b to c
-        if ((flags[currentInstruction, subInstructionCounter] & (1 << 10)) != 0) { cBus = aBus; }
+        if ((flags[currentInstruction, subInstructionCounter] & (1 << 10)) != 0) { cBus = bBus; }
         //d to c
         if ((flags[currentInstruction, subInstructionCounter] & (1 << 14)) != 0) { cBus = data; }
 
@@ -338,6 +338,11 @@ public class Processor
             {0b0000,0b0000},//nothing
         };
 
+        if (importantBitsAndConditionBits[instruction, 0] == 0)
+        {
+            return true;
+        }
+
         for (int i = 0; i < 4; i++)
         {
             //this bit matters
@@ -351,7 +356,7 @@ public class Processor
             }
         }
 
-        return true;
+        return false;
     }
 
 
@@ -400,7 +405,7 @@ public class Processor
             aluStat = (ushort)(aluStat | 4);
         }
         //set zero
-        if (returnValue < 0)
+        if (returnValue == 0)
         {
             aluStat = (ushort)(aluStat | 2);
         }
