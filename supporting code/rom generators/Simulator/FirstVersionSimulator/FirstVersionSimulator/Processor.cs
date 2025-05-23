@@ -103,7 +103,7 @@ public class Processor
     public void loadFlags()
     {
         flags = new UInt64[256, 8];
-        byte[] inputBytes=File.ReadAllBytes("C:\\Users\\breck\\OneDrive\\Documents\\_circuits\\16 bit computer\\github\\16BitComputer\\supporting code\\rom generators\\Simulator\\InstructionFlags\\instructionFlags.bin");
+        byte[] inputBytes=File.ReadAllBytes("C:\\Users\\breck\\Documents\\_CIRCUITS AND 6502\\16 bit computer github\\16BitComputer\\supporting code\\rom generators\\Simulator\\InstructionFlags\\instructionFlags.bin");
         for (int i = 0; i < 256; i++)
         {
             for (int c = 0; c < 8; c++)
@@ -122,7 +122,7 @@ public class Processor
     public void loadInstructionNames()
     {
 
-        string[] inputNames =File.ReadAllLines("C:\\Users\\breck\\OneDrive\\Documents\\_circuits\\16 bit computer\\github\\16BitComputer\\supporting code\\rom generators\\Simulator\\CreatingInstructionFlags\\CreatingInstructionFlags\\InstructionNames.csv");
+        string[] inputNames =File.ReadAllLines("C:\\Users\\breck\\Documents\\_CIRCUITS AND 6502\\16 bit computer github\\16BitComputer\\supporting code\\rom generators\\Simulator\\CreatingInstructionFlags\\CreatingInstructionFlags\\InstructionNames.csv");
         for (int i = 0; i < 256; i++)
         {
             if (i < inputNames.Length)
