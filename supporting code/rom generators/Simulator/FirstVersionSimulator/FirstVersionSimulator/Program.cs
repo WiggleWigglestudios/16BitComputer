@@ -45,42 +45,5 @@ stopwatch.Stop();
 Console.WriteLine(p.registers[0]);
 Console.WriteLine(p.registers[1]);
 Console.WriteLine(p.registers[2]);
-Console.WriteLine(stopwatch.ElapsedMilliseconds);
+Console.WriteLine("Time (ms): "+stopwatch.ElapsedMilliseconds);
 
-
-/*
- float worldSDF(vec3 pos)
-{
-    return min(pos.y,length(vec3(0,0,5)-pos)-1.0f);
-}
-
-void mainImage( out vec4 fragColor, in vec2 fragCoord )
-{
-    // Normalized pixel coordinates (from 0 to 1)
-    vec2 uv = fragCoord/iResolution.xy;
-    uv.x-=0.5f;
-    uv.y-=0.5f;
-    uv.x*=iResolution.x/iResolution.y;
-    
-    vec3 rayDir=vec3(uv.x,uv.y,1);
-    vec3 rayPos=vec3(0,1,0);
-    
-    rayDir=normalize(rayDir);
-    
-    vec3 col = 0.5 + 0.5*cos(iTime+uv.xyx+vec3(0,2,4));
-    for(int i=0;i<20;i++)
-    {
-        float maxStep=worldSDF(rayPos);
-        rayPos+=rayDir*maxStep;
-        if(maxStep<0.01f)
-        {
-            col=vec3(0,0,0);
-                i=10;
-        }
-        
-    }
-    
-
-    // Output to screen
-    fragColor = vec4(col,1.0);
-}*/
