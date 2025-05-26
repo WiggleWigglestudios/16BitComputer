@@ -9,6 +9,9 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\breck\\OneDrive\\Documents\\_circuits\\16 bit computer\\github\\16BitComputer\\supporting code\\Assembler\\programs\\fibSequence.a||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:programs\\fibSequence.a||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\breck\\OneDrive\\Documents\\6502 stuff\\baseLibarary - Copy (2).s||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +21,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "baseLibarary - Copy (2).s",
+              "DocumentMoniker": "C:\\Users\\breck\\OneDrive\\Documents\\6502 stuff\\baseLibarary - Copy (2).s",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\6502 stuff\\baseLibarary - Copy (2).s",
+              "ToolTip": "C:\\Users\\breck\\OneDrive\\Documents\\6502 stuff\\baseLibarary - Copy (2).s",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\6502 stuff\\baseLibarary - Copy (2).s",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-24T19:22:40.46Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -28,7 +44,7 @@
               "RelativeDocumentMoniker": "programs\\fibSequence.a",
               "ToolTip": "C:\\Users\\breck\\OneDrive\\Documents\\_circuits\\16 bit computer\\github\\16BitComputer\\supporting code\\Assembler\\programs\\fibSequence.a",
               "RelativeToolTip": "programs\\fibSequence.a",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-05-23T21:37:33.049Z",
               "EditorCaption": ""
@@ -41,7 +57,7 @@
               "RelativeDocumentMoniker": "Assembler\\Program.cs",
               "ToolTip": "C:\\Users\\breck\\OneDrive\\Documents\\_circuits\\16 bit computer\\github\\16BitComputer\\supporting code\\Assembler\\Assembler\\Program.cs",
               "RelativeToolTip": "Assembler\\Program.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAkwE4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAzwKQAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T21:29:17.74Z",
               "EditorCaption": ""

@@ -1,3 +1,6 @@
+Ball = 5
+Balls=5
+
 load r0 #0
 load r1 #1
 
