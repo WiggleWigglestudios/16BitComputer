@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\breck\\OneDrive\\Documents\\_circuits\\16 bit computer\\github\\16BitComputer\\supporting code\\Assembler\\",
+  "WorkspaceRootPath": "C:\\Users\\breck\\Documents\\_CIRCUITS AND 6502\\16 bit computer github\\16BitComputer\\supporting code\\Assembler\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CC5ADB92-E55A-4A5B-B165-C27BA1C0B2A2}|Assembler\\Assembler.csproj|c:\\users\\breck\\onedrive\\documents\\_circuits\\16 bit computer\\github\\16bitcomputer\\supporting code\\assembler\\assembler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CC5ADB92-E55A-4A5B-B165-C27BA1C0B2A2}|Assembler\\Assembler.csproj|c:\\users\\breck\\documents\\_circuits and 6502\\16 bit computer github\\16bitcomputer\\supporting code\\assembler\\assembler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC5ADB92-E55A-4A5B-B165-C27BA1C0B2A2}|Assembler\\Assembler.csproj|solutionrelative:assembler\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\breck\\OneDrive\\Documents\\_circuits\\16 bit computer\\github\\16BitComputer\\supporting code\\Assembler\\programs\\fibSequence.a||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\breck\\Documents\\_CIRCUITS AND 6502\\16 bit computer github\\16BitComputer\\supporting code\\Assembler\\programs\\fibSequence.a||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:programs\\fibSequence.a||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\breck\\OneDrive\\Documents\\6502 stuff\\baseLibarary - Copy (2).s||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\breck\\Documents\\_CIRCUITS AND 6502\\WaddlesUndergroundAdventure files copy\\code\\Game code\\gameForStemNight.s||{3B902123-F8A7-4915-9F01-361F908088D0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,23 +26,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "baseLibarary - Copy (2).s",
-              "DocumentMoniker": "C:\\Users\\breck\\OneDrive\\Documents\\6502 stuff\\baseLibarary - Copy (2).s",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\6502 stuff\\baseLibarary - Copy (2).s",
-              "ToolTip": "C:\\Users\\breck\\OneDrive\\Documents\\6502 stuff\\baseLibarary - Copy (2).s",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\6502 stuff\\baseLibarary - Copy (2).s",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "gameForStemNight.s",
+              "DocumentMoniker": "C:\\Users\\breck\\Documents\\_CIRCUITS AND 6502\\WaddlesUndergroundAdventure files copy\\code\\Game code\\gameForStemNight.s",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\WaddlesUndergroundAdventure files copy\\code\\Game code\\gameForStemNight.s",
+              "ToolTip": "C:\\Users\\breck\\Documents\\_CIRCUITS AND 6502\\WaddlesUndergroundAdventure files copy\\code\\Game code\\gameForStemNight.s",
+              "RelativeToolTip": "..\\..\\..\\..\\WaddlesUndergroundAdventure files copy\\code\\Game code\\gameForStemNight.s",
+              "ViewState": "AQIAACAJAAAAAAAAAAAAADUJAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-24T19:22:40.46Z",
+              "WhenOpened": "2025-05-27T20:09:07.047Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "fibSequence.a",
-              "DocumentMoniker": "C:\\Users\\breck\\OneDrive\\Documents\\_circuits\\16 bit computer\\github\\16BitComputer\\supporting code\\Assembler\\programs\\fibSequence.a",
+              "DocumentMoniker": "C:\\Users\\breck\\Documents\\_CIRCUITS AND 6502\\16 bit computer github\\16BitComputer\\supporting code\\Assembler\\programs\\fibSequence.a",
               "RelativeDocumentMoniker": "programs\\fibSequence.a",
-              "ToolTip": "C:\\Users\\breck\\OneDrive\\Documents\\_circuits\\16 bit computer\\github\\16BitComputer\\supporting code\\Assembler\\programs\\fibSequence.a",
+              "ToolTip": "C:\\Users\\breck\\Documents\\_CIRCUITS AND 6502\\16 bit computer github\\16BitComputer\\supporting code\\Assembler\\programs\\fibSequence.a",
               "RelativeToolTip": "programs\\fibSequence.a",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
@@ -53,11 +53,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\breck\\OneDrive\\Documents\\_circuits\\16 bit computer\\github\\16BitComputer\\supporting code\\Assembler\\Assembler\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\breck\\Documents\\_CIRCUITS AND 6502\\16 bit computer github\\16BitComputer\\supporting code\\Assembler\\Assembler\\Program.cs",
               "RelativeDocumentMoniker": "Assembler\\Program.cs",
-              "ToolTip": "C:\\Users\\breck\\OneDrive\\Documents\\_circuits\\16 bit computer\\github\\16BitComputer\\supporting code\\Assembler\\Assembler\\Program.cs",
+              "ToolTip": "C:\\Users\\breck\\Documents\\_CIRCUITS AND 6502\\16 bit computer github\\16BitComputer\\supporting code\\Assembler\\Assembler\\Program.cs",
               "RelativeToolTip": "Assembler\\Program.cs",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAzwKQAAAAVAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-23T21:29:17.74Z",
               "EditorCaption": ""

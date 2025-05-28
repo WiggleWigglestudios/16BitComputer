@@ -6,13 +6,21 @@ using System.Collections;
 /* Todo:
  * comments
  * variables/labels
- * 
+ * included files (including a binary, including text)
+ */
+
+/* Order of execution
+ *  Find all variables and assign their value
+ *  Find all labels and assign their value to -1
+ *  Find all instrucion types based of proceeding bytes
+ *  Replace all instances of variables
+ *  convert each instruction into binary
+ *  Save file (h and l)
  */
 
 
-
-string loadFilePath = "C:\\Users\\breck\\OneDrive\\Documents\\_circuits\\16 bit computer\\github\\16BitComputer\\supporting code\\Assembler\\programs\\";
-string saveFilePath = "C:\\Users\\breck\\OneDrive\\Documents\\_circuits\\16 bit computer\\github\\16BitComputer\\supporting code\\Assembler\\Assembled files\\";
+string loadFilePath = "C:\\Users\\breck\\Documents\\_CIRCUITS AND 6502\\16 bit computer github\\16BitComputer\\supporting code\\Assembler\\programs\\";
+string saveFilePath = "C:\\Users\\breck\\Documents\\_CIRCUITS AND 6502\\16 bit computer github\\16BitComputer\\supporting code\\Assembler\\Assembled files\\";
 
 
 
@@ -108,10 +116,18 @@ else
                 if (tokens[i][0] != '=')
                 {
                     variables.Add(new Variable(tokens[i], convertToShort(tokens[1 + 2])));
-                    Console.WriteLine("variable");
+                    Console.WriteLine("Variable"+variables[variables.Count-1].name+" "+ variables[variables.Count - 1].value);
                 }
             }
         }
+
+
+
+    }
+
+
+    for (int i = 0; i < tokens.Count; i++)
+    {
 
 
         //checks if it is a number by checking if leading char # then if it is a number or if it is $ or %
@@ -138,7 +154,7 @@ else
             Console.WriteLine("Register Address");
         }
 
-        
+
 
 
         //assembles instruction
@@ -152,8 +168,25 @@ else
 
 
 
-static short convertToShort(string input)
+static ushort convertToShort(string input)
 {
+    //binary
+    if (input[0] == '%')
+    {
+        int outputValue = 0;
+        for (int i = 1; i <input.Length; i++)
+        { 
+            outputValue = outputValue<<1+Convert.ToInt16(input[i]);
+        }
+        return (ushort)outputValue;
+    }
+    //hex
+    if (input[0] == '$')
+    {
+
+    }
+
+
     return 0;
 }
 
@@ -165,7 +198,7 @@ struct Variable
         name = _name;
         value = _value;
     }
-    string name;
-    short value;
+    public string name;
+    public ushort value;
 }
 
